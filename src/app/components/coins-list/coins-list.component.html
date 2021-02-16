@@ -1,0 +1,12 @@
+<app-search></app-search>
+<div>
+    <div class="row">
+        <div class="col-3" *ngFor="let coin of this.coinsListService.coinsArr">
+            <app-coin [coin]="coin"></app-coin>
+            
+            <p></p>
+        </div>
+        <div *ngIf="this.coinsListService.coinsArr.length < 100" class="spinner-border"  role="status">
+            <span class="sr-only"></span>
+       </div> 
+    </div>
